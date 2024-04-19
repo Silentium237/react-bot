@@ -3,6 +3,7 @@ import './App.css';
 import {useEffect, useState} from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import {ApexChart} from "./components/RadarChart";
 
     let tg = window.Telegram.WebApp;
     function App() {
@@ -25,7 +26,9 @@ import Button from '@mui/material/Button';
   return (
       <div style={{display: "table",
           marginLeft: "auto",
-          marginRight: "auto"}}>
+          marginRight: "auto",
+
+      }}>
         <div>
             <button onClick={onClose}>
                 закрыть
@@ -54,6 +57,7 @@ import Button from '@mui/material/Button';
           <div style={{margin:5}}>
               <Button style={{width: "80%"}} variant="contained" onClick={()=> onClickSave()}>Sign In</Button>
           </div>
+          <ApexChart/>
       </div>
   );
     }
