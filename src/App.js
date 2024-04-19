@@ -29,6 +29,10 @@ import {useEffect} from "react";
             chat id -
             {tg.initDataUnsafe?.chat?.id}
         </span>
+        <span>
+            chat id -
+            {tg.chat?.id}
+        </span>
     </div>
   );
     }
