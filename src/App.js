@@ -2,10 +2,10 @@
 import './App.css';
 import {useEffect} from "react";
 
-import {
-    Routes,
-    Route,
-} from "react-router-dom";
+// import {
+//     Routes,
+//     Route,
+// } from "react-router-dom";
 
 import {ApexChart} from "./components/RadarChart";
 import Hello from "./components/Hello";
@@ -17,20 +17,20 @@ import Hello from "./components/Hello";
     },[])
 
   return (
-      <Routes>
-          <Route path="/" element={<Hello/>} />
-          <Route path="/chart" element={<ApexChart/>} />
-      </Routes>
+      // <Routes>
+      //     <Route path="/" element={<Hello/>} />
+      //     <Route path="/chart" element={<ApexChart/>} />
+      // </Routes>
 
-      // <div style={{display: "table",
-      //     marginLeft: "auto",
-      //     marginRight: "auto",
-      //
-      // }}>
-      //     <Hello/>
-      //     <ApexChart/>
-      //
-      // </div>
+      <div style={{display: "table",
+          marginLeft: "auto",
+          marginRight: "auto",
+
+      }}>
+          <Hello/>
+          <ApexChart/>
+
+      </div>
   );
     }
 
