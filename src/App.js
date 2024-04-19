@@ -17,6 +17,18 @@ import {useEffect} from "react";
       <button onClick={onClose}>
         закрыть
       </button>
+        <span>
+            user name -
+            {tg.initDataUnsafe?.user?.username}
+        </span>
+        <span>
+            user id -
+            {tg.initDataUnsafe?.user?.id}
+        </span>
+        <span>
+            chat id -
+            {tg.initDataUnsafe?.chat?.id}
+        </span>
     </div>
   );
     }
