@@ -1,6 +1,6 @@
 
 import './App.css';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 // import {
 //     Routes,
@@ -9,12 +9,28 @@ import {useEffect} from "react";
 
 import {ApexChart} from "./components/RadarChart";
 import Hello from "./components/Hello";
+import Button from "@mui/material/Button";
 
     let tg = window.Telegram.WebApp;
     function App() {
     useEffect(()=>{
         tg.ready();
     },[])
+
+
+        const [show, setShow] = useState(false)
+
+        useEffect(()=>{
+            if (window.localStorage.getItem("telegram")){
+                setShow(true)
+            }
+        },[])
+
+        const onClickSave = () => {
+            window.localStorage.setItem("telegram", "true")
+            setShow(false)
+        }
+
 
   return (
       // <Routes>
@@ -27,8 +43,16 @@ import Hello from "./components/Hello";
           marginRight: "auto",
 
       }}>
-          <Hello/>
-          <ApexChart/>
+          <Hello show={show} setShow={setShow}/>
+          {!show ? <ApexChart/> : null}
+
+          {!show ?  <div style={{margin:5}}>
+              <Button onClick={()=>(window.localStorage.removeItem("telegram"),
+                  setShow(true))} style={{width: "100%"}} color="error" variant="contained" >Sing Out</Button>
+          </div> : null
+
+          }
+
 
       </div>
   );
