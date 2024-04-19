@@ -73,7 +73,11 @@ export class ApexChart extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{display: "table",
+                marginLeft: "auto",
+                marginRight: "auto",
+
+            }}>
                 <div id="chart">
                     <ReactApexChart options={this.state.options} series={this.state.series} type="radar" height={350} />
                 </div>
