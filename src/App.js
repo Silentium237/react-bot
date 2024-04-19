@@ -30,32 +30,33 @@ import {ApexChart} from "./components/RadarChart";
 
       }}>
         <div>
-            <button onClick={onClose}>
-                закрыть
-            </button>
+            <div style={{margin:5}}>
+                <Button onClick={onClose} style={{width: "100%"}} color="success" variant="contained" >Close Window</Button>
+            </div>
+
         </div>
-          <div>
-              <span>
+          <div style={{margin:5}}>
+              <p>
             user first_name -
                   {tg.initDataUnsafe?.user?.first_name}
-        </span>
-              <span>
+                </p>
+              <p>
             user last_name -
                   {tg.initDataUnsafe?.user?.last_name}
-        </span>
-              <span>
+        </p>
+              <p>
             user id -
                   {tg.initDataUnsafe?.user?.id}
-        </span>
+        </p>
           </div>
           <div style={{margin:5}}>
-              <TextField id="outlined-basic" label="Email" variant="outlined" onChange={(e)=> setEmail(e.target.value)}/>
+              <TextField style={{width: "100%"}} id="outlined-basic" label="Email" variant="outlined" onChange={(e)=> setEmail(e.target.value)}/>
           </div>
           <div style={{margin:5}}>
-              <TextField id="outlined-basic" label="Password" variant="outlined" onChange={(e)=> setEmail(e.target.value)} />
+              <TextField style={{width: "100%"}} id="outlined-basic" label="Password" variant="outlined" onChange={(e)=> setEmail(e.target.value)} />
           </div>
           <div style={{margin:5}}>
-              <Button style={{width: "80%"}} variant="contained" onClick={()=> onClickSave()}>Sign In</Button>
+              <Button style={{width: "100%"}} variant="contained" onClick={()=> onClickSave()}>Sign In</Button>
           </div>
           <ApexChart/>
       </div>
