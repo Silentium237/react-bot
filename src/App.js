@@ -18,20 +18,16 @@ import {useEffect} from "react";
         закрыть
       </button>
         <span>
-            user name -
-            {tg.initDataUnsafe?.user?.username}
+            user first_name -
+            {tg.initDataUnsafe?.user?.first_name}
+        </span>
+        <span>
+            user last_name -
+            {tg.initDataUnsafe?.user?.last_name}
         </span>
         <span>
             user id -
             {tg.initDataUnsafe?.user?.id}
-        </span>
-        <span>
-            chat id -
-            {tg.initDataUnsafe?.chat?.id}
-        </span>
-        <span>
-            chat id -
-            {tg.chat?.id}
         </span>
     </div>
   );
