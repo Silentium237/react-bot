@@ -69,7 +69,7 @@ function Hello ({show, setShow}) {
                     {tg.initDataUnsafe?.user?.id}
                 </p>
             </div>
-            {show  ? <>
+            {!show  ? <>
                 <div style={{margin:5}}>
                     <TextField style={{width: "100%"}} id="outlined-basic" label="Email" variant="outlined" onChange={(e)=> setEmail(e.target.value)}/>
                 </div>
@@ -77,7 +77,7 @@ function Hello ({show, setShow}) {
                     <TextField style={{width: "100%"}} id="outlined-basic" label="Password" variant="outlined" onChange={(e)=> setPassword(e.target.value)} />
                 </div>
                 <div style={{margin:5}}>
-                    <Button style={{width: "100%"}} variant="contained" onClick={()=> (window.localStorage.setItem("telegram", "true"), setShow(false))}>Sign In</Button>
+                    <Button style={{width: "100%"}} variant="contained" onClick={()=> (window.localStorage.setItem("telegram", "true"), setShow(true))}>Sign In</Button>
                 </div>
             </> : null}
 

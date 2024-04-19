@@ -28,7 +28,7 @@ import Button from "@mui/material/Button";
 
         const onClickSave = () => {
             window.localStorage.setItem("telegram", "true")
-            setShow(false)
+            setShow(true)
         }
 
 
@@ -44,11 +44,11 @@ import Button from "@mui/material/Button";
 
       }}>
           <Hello show={show} setShow={setShow}/>
-          {!show ? <ApexChart/> : null}
+          {show ? <ApexChart/> : null}
 
-          {!show ?  <div style={{margin:5}}>
+          {show ?  <div style={{margin:5}}>
               <Button onClick={()=>(window.localStorage.removeItem("telegram"),
-                  setShow(true))} style={{width: "100%"}} color="error" variant="contained" >Sing Out</Button>
+                  setShow(false))} style={{width: "100%"}} color="error" variant="contained" >Sing Out</Button>
           </div> : null
 
           }
