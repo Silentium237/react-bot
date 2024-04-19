@@ -12,10 +12,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "../telegram-react-bot/node_modules/.bin/react-scripts start",
-    "build": "../telegram-react-bot/node_modules/.bin/react-scripts build",
-    "test": "../telegram-react-bot/node_modules/.bin/react-scripts test",
-    "eject": "../telegram-react-bot/node_modules/.bin/react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts start",
+    "test": "react-scripts start",
+    "eject": "react-scripts start"
   },
   "eslintConfig": {
     "extends": [
